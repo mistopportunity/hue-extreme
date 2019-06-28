@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1 1" version="1.1">
+    <defs>
+        <linearGradient id="g">
+            <stop offset="0" stop-color="white" stop-opacity="0" />
+            <stop offset="1" stop-color="white" stop-opacity="1" />
+        </linearGradient>
+        <mask id="m">
+            <rect x="0" y="0" width="1" height="1" fill="url(#g)" />
+        </mask>
+        <linearGradient id="a" gradientTransform="rotate(90)">
+            <stop offset="0" stop-color="#D8FF3D" />
+            <stop offset="1" stop-color="#FF843D" />
+        </linearGradient>
+        <linearGradient id="b" gradientTransform="rotate(90)">
+            <stop offset="0" stop-color="#3DFFDB" />
+            <stop offset="1" stop-color="#FF3D84" />
+        </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1" height="1" fill="url(#a)" mask="url(#m)" />
+    <rect x="0" y="0" width="1" height="1" fill="url(#b)" mask="url(#m)" transform="translate(1,1) rotate(180)"/>
+</svg>
