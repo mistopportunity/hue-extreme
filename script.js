@@ -8,7 +8,6 @@ function getScrambleMap(size,callback) {
     var context = canvas.getContext("2d");
     var image = new Image();
     image.onload = function() {
-        console.log(image.width,image.height);
         context.drawImage(image,0,0,size,size,0,0,size,size);
         var contextData = context.getImageData(0,0,size,size).data;
         function getColor(x,y) {
@@ -191,16 +190,6 @@ function you_win() {
 
     svgElement.appendChild(svgGroup);
     document.body.appendChild(svgElement);
-
-    var instance = panzoom(svgGroup,{
-        zoomDoubleClickSpeed: 1,
-        onTouch: function(e) {
-            return false;
-        }
-    });
-    instance.on("panstart", function(e) {
-        panning = true;
-    });
 
     getScrambleMap(MATRIX_SIZE,function(scrambleMap){
         var hashMap = scrambleMap.hashMap;
