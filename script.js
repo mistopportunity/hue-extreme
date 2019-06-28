@@ -193,7 +193,10 @@ function you_win() {
     document.body.appendChild(svgElement);
 
     var instance = panzoom(svgGroup,{
-        zoomDoubleClickSpeed: 1
+        zoomDoubleClickSpeed: 1,
+        onTouch: function(e) {
+            return false;
+        }
     });
     instance.on("panstart", function(e) {
         panning = true;
