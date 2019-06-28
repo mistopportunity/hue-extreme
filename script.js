@@ -177,7 +177,7 @@ function you_win() {
             var square = getSquare(x,y);
             column[x] = square;
             (function(target){
-                target.addEventListener("pointerup",function() {
+                target.addEventListener("click",function() {
                     processSquareClicked(target);
                 });
             })(square);
